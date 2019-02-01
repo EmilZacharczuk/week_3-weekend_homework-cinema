@@ -69,5 +69,11 @@ ticket_4.save
 customer_1.name = 'Kamil'
 customer_1.update
 
+film_1.title = 'Superwoman'
+film_1.update
+
+ticket_1.customer_id = customer_2.id
+ticket_1.update
+
 binding.pry
 nil
