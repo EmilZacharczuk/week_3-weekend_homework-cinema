@@ -75,7 +75,7 @@ film_1.update
 ticket_1.customer_id = customer_2.id
 ticket_1.update
 
-mark = Customer.find(customer_1.id)
+mark = Customer.find(customer_2.id)
 
 superman = Film.find(film_2.id)
 

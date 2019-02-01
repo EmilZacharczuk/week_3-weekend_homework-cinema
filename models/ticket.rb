@@ -33,8 +33,8 @@ class Ticket
   def self.find(id)
     sql = "SELECT * FROM tickets WHERE id = $1"
     values = [id]
-    tickets = SqlRunner.run(sql, values)
-    result = Ticket.new(tickets.first)
+    tickets = SqlRunner.run(sql, values).first
+    result = Ticket.new(tickets)
   end
   def self.delete_all
     sql = "DELETE FROM tickets"
