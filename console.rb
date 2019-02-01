@@ -20,5 +20,23 @@ customer_1.save
 customer_2.save
 customer_3.save
 
+film_1 = Film.new({
+  'title' => 'Batman',
+  'price' => 5})
+
+film_2 = Film.new({
+  'title' => 'Superman',
+  'price' => 6
+  })
+
+film_3 = Film.new({
+  'title' => 'Spiderman',
+  'price' => 7
+  })
+
+film_1.save
+film_2.save
+film_3.save
+
 binding.pry
 nil
