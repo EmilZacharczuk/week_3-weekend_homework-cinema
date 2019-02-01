@@ -66,5 +66,8 @@ ticket_2.save
 ticket_3.save
 ticket_4.save
 
+customer_1.name = 'Kamil'
+customer_1.update
+
 binding.pry
 nil
