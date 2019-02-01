@@ -24,6 +24,13 @@ class Customer
     customer = SqlRunner.run(sql,values).first
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM customers WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    customer = Customer.new(result.first)
+    return customer
+  end
   def self.all
     sql = "SELECT * FROM customers"
     values = []

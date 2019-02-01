@@ -75,5 +75,11 @@ film_1.update
 ticket_1.customer_id = customer_2.id
 ticket_1.update
 
+mark = Customer.find(customer_1.id)
+
+superman = Film.find(film_2.id)
+
+lost_ticket = Ticket.find(ticket_1.id)
+
 binding.pry
 nil
