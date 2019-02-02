@@ -32,7 +32,9 @@ class Customer
     result = films.map { |film| Film.new(film)}
     return result
   end
-
+  def how_many_films
+    self.films.length
+  end
   def remaining_funds()
     films = self.films()
     films_cost = films.map{|film| film.price.to_i}
@@ -45,6 +47,11 @@ class Customer
     customer = Customer.new(result)
     return customer
   end
+
+  def self.reverse_order
+    self.all.reverse
+  end
+
   def self.all
     sql = "SELECT * FROM customers"
     values = []
