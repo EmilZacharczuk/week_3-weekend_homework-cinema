@@ -33,6 +33,9 @@ class Film
     return result
   end
 
+  def how_many_customers
+    self.customers.length
+  end
   def self.find(id)
     sql = "SELECT * FROM films WHERE id = $1"
     values = [id]

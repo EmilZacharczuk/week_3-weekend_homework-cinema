@@ -32,9 +32,11 @@ class Customer
     result = films.map { |film| Film.new(film)}
     return result
   end
-  def how_many_films
+
+  def how_many_films()
     self.films.length
   end
+
   def remaining_funds()
     films = self.films()
     films_cost = films.map{|film| film.price.to_i}
