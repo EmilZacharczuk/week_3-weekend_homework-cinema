@@ -7,6 +7,7 @@ require_relative('models/screening.rb')
 
 Customer.delete_all
 Film.delete_all
+Screening.delete_all
 
 customer_1 = Customer.new({
   'name' => 'Emil',
@@ -51,32 +52,79 @@ film_1.save
 film_2.save
 film_3.save
 
+screening_1 = Screening.new ({
+  'show_time' => '12:00',
+  'film_id' => film_1.id
+  })
+screening_2 = Screening.new({
+  'show_time' => '13:30',
+  'film_id' => film_2.id
+  })
+screening_3 = Screening.new({
+  'show_time' => '15:00',
+  'film_id' => film_3.id
+  })
+screening_4 = Screening.new({
+  'show_time' => '15:30',
+  'film_id' => film_3.id
+  })
+screening_5 = Screening.new({
+  'show_time' => '17:30',
+  'film_id' => film_1.id
+  })
+screening_6 = Screening.new({
+  'show_time' => '22:30',
+  'film_id' => film_1.id
+  })
+screening_7 = Screening.new({
+  'show_time' => '10:30',
+  'film_id' => film_3.id
+  })
+screening_1.save
+screening_2.save
+screening_3.save
+screening_4.save
+screening_5.save
+screening_6.save
+screening_7.save
+
 ticket_1 = Ticket.new({
   'customer_id' => customer_1.id,
-  'film_id' => film_1.id
+  'film_id' => film_1.id,
+  'screening_id' => screening_1
   })
 
 ticket_2 = Ticket.new({
   'customer_id' => customer_2.id,
-  'film_id' => film_2.id
+  'film_id' => film_2.id,
+  'screening_id' => screening_2
+
   })
 
 ticket_3 = Ticket.new({
   'customer_id' => customer_3.id,
-  'film_id' => film_3.id
+  'film_id' => film_3.id,
+  'screening_id' => screening_3
+
   })
 
 ticket_4 = Ticket.new({
   'customer_id' => customer_1.id,
-  'film_id' => film_3.id
+  'film_id' => film_3.id,
+  'screening_id' => screening_4
+
   })
 ticket_5 = Ticket.new({
   'customer_id' => customer_1.id,
-  'film_id' => film_1.id
+  'film_id' => film_1.id,
+  'screening_id' => screening_5
+
   })
 ticket_6 = Ticket.new({
   'customer_id' => customer_1.id,
-  'film_id' => film_1.id
+  'film_id' => film_1.id,
+  'screening_id' => screening_6
+
   })
 ticket_1.save
 ticket_2.save
@@ -85,16 +133,7 @@ ticket_4.save
 ticket_5.save
 ticket_6.save
 
-screening_1 = Screening.new ({
-  'film_id' => film_1.id,
-  'time' => '12:00'
-  })
-screening_2 = Screening.new({
-  'film_id' => film_1.id,
-  'time' => '16:30'
-  })
-screening_1.save
-screening_2.save
+
 
 customer_1.name = 'Kamil'
 customer_1.update
