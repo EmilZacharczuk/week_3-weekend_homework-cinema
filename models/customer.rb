@@ -50,10 +50,6 @@ class Customer
     return customer
   end
 
-  def self.reverse_order
-    self.all.reverse
-  end
-
   def self.all
     sql = "SELECT * FROM customers"
     values = []

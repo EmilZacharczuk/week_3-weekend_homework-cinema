@@ -91,40 +91,50 @@ screening_7.save
 ticket_1 = Ticket.new({
   'customer_id' => customer_1.id,
   'film_id' => film_1.id,
-  'screening_id' => screening_1
+  'screening_id' => screening_1.id
   })
 
 ticket_2 = Ticket.new({
   'customer_id' => customer_2.id,
   'film_id' => film_2.id,
-  'screening_id' => screening_2
+  'screening_id' => screening_2.id
 
   })
 
 ticket_3 = Ticket.new({
   'customer_id' => customer_3.id,
   'film_id' => film_3.id,
-  'screening_id' => screening_3
+  'screening_id' => screening_3.id
 
   })
 
 ticket_4 = Ticket.new({
   'customer_id' => customer_1.id,
   'film_id' => film_3.id,
-  'screening_id' => screening_4
+  'screening_id' => screening_4.id
 
   })
 ticket_5 = Ticket.new({
   'customer_id' => customer_1.id,
   'film_id' => film_1.id,
-  'screening_id' => screening_5
+  'screening_id' => screening_5.id
 
   })
 ticket_6 = Ticket.new({
   'customer_id' => customer_1.id,
   'film_id' => film_1.id,
-  'screening_id' => screening_6
+  'screening_id' => screening_6.id
 
+  })
+ticket_7 = Ticket.new({
+  'customer_id' => customer_1.id,
+  'film_id' => film_1.id,
+  'screening_id' => screening_6.id
+  })
+ticket_8 = Ticket.new({
+  'customer_id' => customer_2.id,
+  'film_id' => film_1.id,
+  'screening_id' => screening_6.id
   })
 ticket_1.save
 ticket_2.save
@@ -132,8 +142,8 @@ ticket_3.save
 ticket_4.save
 ticket_5.save
 ticket_6.save
-
-
+ticket_7.save
+ticket_8.save
 
 customer_1.name = 'Kamil'
 customer_1.update
